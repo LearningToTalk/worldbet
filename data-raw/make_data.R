@@ -10,4 +10,4 @@ worldbet_key <- read.table(
   comment.char = ""
 )
 
-devtools::use_data(worldbet_key, internal = TRUE)
+devtools::use_data(worldbet_key, diacritics, segmentals, segmentals_to_ipa, internal = TRUE, overwrite = TRUE)
