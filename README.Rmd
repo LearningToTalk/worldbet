@@ -1,0 +1,32 @@
+---
+output:
+  md_document:
+    variant: markdown_github
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+# worldbet: Convert WorldBet to IPA
+
+```{r, eval = FALSE}
+library("worldbet")
+
+# that
+convert_bet_to_ipa("D@t")
+
+# uh-oh
+convert_bet_to_ipa("^?o")
+
+# still working on diacritics though
+convert_bet_to_ipa("wA)&_r")
+
+```
+
