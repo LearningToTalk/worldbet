@@ -53,3 +53,18 @@ convert_bet_to_ipa("^?o")
 # diacritics are not supported yet
 convert_bet_to_ipa("wA)&_r")
 ```
+
+## WorldBet specification
+
+The table below shows the implementation of the WorldBet used in the package.
+
+```{r, echo = FALSE}
+library("dplyr", warn.conflicts = FALSE)
+as_literal <- function(xs) sprintf("`%s`", xs)
+worldbet_key %>% 
+  mutate(HTML_Entity = as_literal(Entity),
+         WorldBet = as_literal(WorldBet)) %>% 
+  select(WorldBet, IPA = Entity, `HTML Entity` = HTML_Entity) %>% 
+  knitr::kable(.)
+```
+
