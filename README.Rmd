@@ -33,9 +33,8 @@ convert_bet_to_ipa("D@t")
 convert_bet_to_ipa("^?o")
 #> [1] "ʌʔo"
 
-# diacritics are not supported yet
 convert_bet_to_ipa("wA)&_r")
-#> [1] "wɑɾə_r"
+#> [1] "wɑɾɚ"
 ```
 
 From the command prompt (on Windows), R falls back to escape sequences during
@@ -50,7 +49,7 @@ convert_bet_to_ipa("D@t")
 # uh-oh
 convert_bet_to_ipa("^?o")
 
-# diacritics are not supported yet
+# water
 convert_bet_to_ipa("wA)&_r")
 ```
 

@@ -17,9 +17,8 @@ convert_bet_to_ipa("D@t")
 convert_bet_to_ipa("^?o")
 #> [1] "ʌʔo"
 
-# diacritics are not supported yet
 convert_bet_to_ipa("wA)&_r")
-#> [1] "wɑɾə_r"
+#> [1] "wɑɾɚ"
 ```
 
 From the command prompt (on Windows), R falls back to escape sequences during the conversions.
@@ -35,9 +34,9 @@ convert_bet_to_ipa("D@t")
 convert_bet_to_ipa("^?o")
 #> [1] "<U+028C><U+0294>o"
 
-# diacritics are not supported yet
+# water
 convert_bet_to_ipa("wA)&_r")
-#> [1] "w<U+0251><U+027E><U+0259>_r"
+#> [1] "w<U+0251><U+027E><U+025A>"
 ```
 
 WorldBet specification
@@ -88,3 +87,4 @@ The table below shows the implementation of the WorldBet used in the package.
 | `>`      | ɔ   | `&#x254;`   |
 | `A`      | ɑ   | `&#x251;`   |
 | `_r`     | ˞   | `&#x2DE;`   |
+| `&_r`    | ɚ   | `&#x25A;`   |
