@@ -19,12 +19,14 @@ inline <- "/`r convert_bet_to_entity('SIp')`/"
 
 # worldbet: Convert WorldBet to IPA
 
-This package is quick-and-dirty way to convert worldbet ASCII characters into
-different representations.
+This micropackage convert [WorldBet] ASCII characters for English into UTF-8
+character and HTML entities.
+
+[WorldBet]: https://www.ling.ohio-state.edu/~edwards/WorldBet/worldbet.pdf
 
 ## Inside of R: RStudio
 
-RStudio has rich support for UTF-8 symbols. Here is how some WorldBet-toiPA
+RStudio has rich support for UTF-8 symbols. Here is how some WorldBet-to-IPA
 conversions look in RStudio.
 
 ```{r, eval = FALSE}
@@ -85,7 +87,7 @@ the symbols.
 
 The table below shows the implementation of the WorldBet used in the package.
 
-```{r, echo = FALSE, warning = FALSE}
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
 library("dplyr")
 as_literal <- function(xs) sprintf("`%s`", xs)
 worldbet_key %>% 
@@ -94,4 +96,3 @@ worldbet_key %>%
   select(WorldBet, IPA = Entity, `HTML Entity` = HTML_Entity) %>% 
   knitr::kable(.)
 ```
-

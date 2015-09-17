@@ -2,12 +2,12 @@
 worldbet: Convert WorldBet to IPA
 =================================
 
-This package is quick-and-dirty way to convert worldbet ASCII characters into different representations.
+This micropackage convert [WorldBet](https://www.ling.ohio-state.edu/~edwards/WorldBet/worldbet.pdf) ASCII characters for English into UTF-8 character and HTML entities.
 
 Inside of R: RStudio
 --------------------
 
-RStudio has rich support for UTF-8 symbols. Here is how some WorldBet-toiPA conversions look in RStudio.
+RStudio has rich support for UTF-8 symbols. Here is how some WorldBet-to-IPA conversions look in RStudio.
 
 ``` r
 library("worldbet")
@@ -63,17 +63,6 @@ WorldBet specification
 ----------------------
 
 The table below shows the implementation of the WorldBet used in the package.
-
-    #> 
-    #> Attaching package: 'dplyr'
-    #> 
-    #> The following objects are masked from 'package:stats':
-    #> 
-    #>     filter, lag
-    #> 
-    #> The following objects are masked from 'package:base':
-    #> 
-    #>     intersect, setdiff, setequal, union
 
 | WorldBet | IPA | HTML Entity |
 |:---------|:----|:------------|
