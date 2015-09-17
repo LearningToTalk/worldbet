@@ -4,7 +4,7 @@
 \name{worldbet_key}
 \alias{worldbet_key}
 \title{WorldBet symbol key}
-\format{A data frame with 41 rows and 3 variables:
+\format{A data frame with 42 rows and 3 variables:
 \describe{
   \item{WorldBet}{ASCII representation of the symbol}
   \item{IPA}{IPA symbol, encoded in UTF-8}
@@ -14,7 +14,7 @@
 worldbet_key
 }
 \description{
-A table containing different representations of IPA symbols.
+A table containing different representations of (English) IPA symbols.
 }
 \keyword{datasets}
 
