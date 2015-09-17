@@ -2,7 +2,7 @@
 worldbet: Convert WorldBet to IPA
 =================================
 
-This micropackage convert [WorldBet](https://www.ling.ohio-state.edu/~edwards/WorldBet/worldbet.pdf) ASCII characters for English into UTF-8 character and HTML entities.
+This micropackage converts [WorldBet](https://www.ling.ohio-state.edu/~edwards/WorldBet/worldbet.pdf) ASCII characters for English sounds into UTF-8 character and HTML entities.
 
 Inside of R: RStudio
 --------------------

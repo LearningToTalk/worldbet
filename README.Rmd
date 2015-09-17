@@ -19,8 +19,8 @@ inline <- "/`r convert_bet_to_entity('SIp')`/"
 
 # worldbet: Convert WorldBet to IPA
 
-This micropackage convert [WorldBet] ASCII characters for English into UTF-8
-character and HTML entities.
+This micropackage converts [WorldBet] ASCII characters for English sounds into
+UTF-8 character and HTML entities.
 
 [WorldBet]: https://www.ling.ohio-state.edu/~edwards/WorldBet/worldbet.pdf
 
