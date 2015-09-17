@@ -4,7 +4,10 @@ worldbet: Convert WorldBet to IPA
 
 This package is quick-and-dirty way to convert worldbet ASCII characters into different representations.
 
-Here is how the conversions look in RStudio.
+Inside of R: RStudio
+--------------------
+
+RStudio has rich support for UTF-8 symbols. Here is how some WorldBet-toiPA conversions look in RStudio.
 
 ``` r
 library("worldbet")
@@ -17,15 +20,17 @@ convert_bet_to_ipa("D@t")
 convert_bet_to_ipa("^?o")
 #> [1] "ʌʔo"
 
-convert_bet_to_ipa("wA)&_r")
-#> [1] "wɑɾɚ"
+# water, weather (vector input)
+convert_bet_to_ipa(c("wA)&_r", "wED&_r"))
+#> [1] "wɑɾɚ" "wɛðɚ"
 ```
 
-From the command prompt (on Windows), R falls back to escape sequences during the conversions.
+Inside of R: Command Line
+-------------------------
+
+From the command prompt on Windows, R falls back to escape sequences during the conversions.
 
 ``` r
-library("worldbet")
-
 # that
 convert_bet_to_ipa("D@t")
 #> [1] "ðæt"
@@ -34,15 +39,41 @@ convert_bet_to_ipa("D@t")
 convert_bet_to_ipa("^?o")
 #> [1] "<U+028C><U+0294>o"
 
-# water
-convert_bet_to_ipa("wA)&_r")
-#> [1] "w<U+0251><U+027E><U+025A>"
+# water, weather (vector input)
+convert_bet_to_ipa(c("wA)&_r", "wED&_r"))
+#> [1] "w<U+0251><U+027E><U+025A>" "w<U+025B>ð<U+025A>"
 ```
+
+Outside of R: HTML Entities
+---------------------------
+
+For RMarkdown documents, we can use HTML entities for in-text use of IPA. For example, we could write the following RMarkdown in our prose:
+
+    The word was /`r convert_bet_to_entity('SIp')`/ ("ship").
+
+RMarkdown-to-markdown conversion then yields the following text with HTML entities instead of WorldBet symbols:
+
+    The word was /&#x283;&#x26A;&#x70;/ ("ship").
+
+Finally, markdown-to-HTML conversion yields the following human-readable form of the symbols.
+
+> The word was /ʃɪp/ ("ship").
 
 WorldBet specification
 ----------------------
 
 The table below shows the implementation of the WorldBet used in the package.
+
+    #> 
+    #> Attaching package: 'dplyr'
+    #> 
+    #> The following objects are masked from 'package:stats':
+    #> 
+    #>     filter, lag
+    #> 
+    #> The following objects are masked from 'package:base':
+    #> 
+    #>     intersect, setdiff, setequal, union
 
 | WorldBet | IPA | HTML Entity |
 |:---------|:----|:------------|
